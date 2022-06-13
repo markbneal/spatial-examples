@@ -33,7 +33,7 @@ ggplot(base_points_sf)+
 	geom_sf()
 
 # Read reported locations of static testing from excel file
-reported_points <- read_excel("eShepherd static testing.xlsx", sheet = "locations")
+reported_points <- read_excel("static testing.xlsx", sheet = "locations")
 reported_points
 
 # Convert to google standard projection
@@ -89,3 +89,4 @@ ggplot(static_data_joined)+
 static_data_joined %>%
 	group_by(deviceName) %>%
 	summarise(median = median(Distance))
+
